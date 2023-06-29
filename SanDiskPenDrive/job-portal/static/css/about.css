@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+/*<------------------ CAROUSEL START ------------------> */
+.carousel-caption{
+  margin-bottom: 5rem;
+  margin-right: 5rem;
+  padding-right: 5rem;
+  width: fit-content;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 5%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+
+.img_slider{
+  display: flex;
+  align-items: left;
+  text-align: left;
+  justify-content: left;
+}
+
+.carousel-indicators{
+  width: auto;
+}
+
+.A_h1{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+  width: fit-content;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color : #00FFD1;
+}
+.A_p{
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color : #3B9AE1;
+  font-size: 29px;
+  font-weight: bold;
+}
+/*<------------------ GET STARTED BUTTON ------------------> */
+.button_GS{
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  background-color: #00FFD1;
+  color : white; 
+  font-weight: bold;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 15rem;
+  height: 3rem;
+  font-size: 20px;
+
+}
+.button_GS:hover{
+  background-color: #00d1ab;
+  color :white; 
+}
+
+.img_slider{
+  margin-top: 5rem;
+}
+
+
+
+
+
+
+
+/*<------------------ CAROUSEL END ------------------> */

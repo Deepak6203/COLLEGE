@@ -1,0 +1,17 @@
+<web-app>
+
+<servlet>
+
+<servlet-name>Generic</servlet-name>
+<servlet-class>Generic</servlet-class>
+
+</servlet>
+
+<servlet-mapping>
+
+<servlet-name>Generic</servlet-name>
+<url-pattern>/First</url-pattern>
+
+</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{url_for('static', filename='css//signin.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/dashboard.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/images/gj-sqaure-logo-2-50x50.png')}} "
+    type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Get Job</title>
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <div class="container-fluid NAV">
+        <div class="row">
+            <div class="col-12 Header_Div">
+                <a href="/"><img src="{{ url_for('static',filename='img/GetJob.png') }}" alt="Logo of Get Job" class="Header_Img"></a>
+                <h1 class="Header_h1">Get Job</h1>
+            </div>            
+        </div>
+    </div>
+
+    <!--container dashboard-->
+    <div class="container dashboard">
+      <div class="row cente">
+        <!--I Want To Hire-->
+        <div class="col-sm-12 col-lg-12 hiring mt-4">
+        <img src="{{url_for('static', filename='img/D1.png')}}" class="img-fluid" alt="...">
+        <button type="button" class="btn hire_work"><a href="/hire" class="work_hire">I Want To Hire</a></button>
+        </div>
+        <!--I Want To Work-->
+        <div class="col-sm-12 col-lg-12 work mt-4">
+        <img src="{{url_for('static', filename='img/D2.png')}}" class="img-fluid" alt="...">
+        <button type="button" class="btn hire_work "><a href="/Work" class="work_hire">I Want To Work</a></button>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

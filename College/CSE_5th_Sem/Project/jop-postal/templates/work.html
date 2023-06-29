@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/work.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/images/gj-sqaure-logo-2-50x50.png')}} "
+    type="image/x-icon">
+    <title>Job Seeker</title>
+  </head>
+  <body>
+    
+    <!--NAV START-->
+    <div class="container-fluid">
+        <div class="row">           
+            <nav class="navbar navbar-expand-lg navbar-light " id="nav">
+                <div class="container-fluid">
+                  <a class="navbar-brand getjob_text text-light" href="/" ><img src="{{url_for('static', filename='img/GetJob.png')}}" class="img_getjob" alt="Italian Trulli"> Get Job</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon navbar-toggler"></span>
+                  </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--          
+                        <li><a class="home_about">Home</a></li>                
+                        <li><a class="home_about">About Us</a></li> -->              
+                    </ul>  
+                    {% for user in users %}                      
+                    <div>
+                        <a href="/card" class="btn  BTN2 ">Create A Job Profile</a>
+                        <select class="form-select btn BTN2" name="links" size="1" onchange="window.location.href=this.value;">
+                            <option value="{{url_for('Profile',profileid=user.6)}}" selected >Profile</option>
+                            <option value="{{url_for('Profile',profileid=user.6)}}"  >Profile</option>
+                            <option value="{{url_for('Profile',profileid=user.6)}}"  >Profiled</option>
+                            <!--<option value="/Profile"   >Profile</option>-->
+                            <option value="/Dashboard">Dashboard</option>
+                            <option value="/Sign_out">Sign out</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+            
+        </div>
+    </div>
+<!--NAV END-->
+
+
+
+<!-- START POST CREATE-->
+<div class="container card_container">
+<div class="row">
+  <div class="col">
+{% for post in posts %}
+<div class="container_card">
+  <div class="card">
+  <div class="card-body">
+    <span class="tag tag-teal">{{ post[1] }}</span>
+    <!--<p>{{  post[2] }}</p>-->
+    <h4>Experience {{  post[2] }}</h4>					      
+    <p>{{  post[3] }}</p>
+                  
+                
+    <div class="user">
+          <img src="{{ url_for('static',filename='image/img_avatar.png') }}" alt="user" />
+          <div class="user-info">
+            <h5>{{  post[4] }}</h5>
+            <small>{{  post[5] }}</small>
+          </div>
+          <!--<a class="btn BTN2 btn_post ms-2" value="{{ post.0 }}"  href="/Update_card/{{post.0}}">Edit </a>-->
+          <a class="btn BTN2 btn_post ms-2" value="{{ post.0 }}"  href="{{url_for('Update_card',Editid=post.0)}}">Edit </a>
+          <a class="btn BTN2 btn_post ms-2" onclick="return confirm('Are Sure Want To Deleted ?')" href="/Delete_card/{{post.0}}">Delete </a>
+    </div>
+
+
+    <hr>
+    <div class="w-100 " style="height:150px; overflow: auto;">
+      <table class="card-table table">
+        <thead>
+          <tr>
+            <th scope="col">Job Title</th>
+            <th scope="col">Job Description</th>
+            <th scope="col">Request</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+          <tr>
+            <td>gfbrbx{{ request[0] }}</td>
+            <td>dgdsg{{ request[1] }}</td>
+            <td><button class="btn btn-primary">Accept</button>
+            <button class="btn btn-danger">Reject</button></td>
+          </tr>
+          <tr>
+            <td>gfbrbx{{ request[0] }}</td>
+            <td>dgdsg{{ request[1] }}</td>
+            <td><button class="btn btn-primary">Accept</button>
+            <button class="btn btn-danger">Reject</button></td>
+          </tr>
+          <tr>
+            <td>gfbrbx{{ request[0] }}</td>
+            <td>dgdsg{{ request[1] }}</td>
+            <td><button class="btn btn-primary">Accept</button>
+            <button class="btn btn-danger">Reject</button></td>
+          </tr>
+          <tr>
+            <td>gfbrbx{{ request[0] }}</td>
+            <td>dgdsg{{ request[1] }}</td>
+            <td><button class="btn btn-primary">Accept</button>
+            <button class="btn btn-danger">Reject</button></td>
+          </tr>
+          <tr>
+            <td>gfbrbx{{ request[0] }}</td>
+            <td>dgdsg{{ request[1] }}</td>
+            <td><button class="btn btn-primary">Accept</button>
+            <button class="btn btn-danger">Reject</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+
+
+
+{% endfor %}
+</div>
+</div>
+</div>
+<!-- END POST CREATE-->
+
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+  </div>
+</div>-->
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

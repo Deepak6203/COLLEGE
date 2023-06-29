@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{{url_for('static', filename='css//signin.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="icon" href="{{url_for('static',filename='img/GetJob.ico')}}">
+    <link href="{{url_for('static', filename='css//create_job.css')}}" rel="stylesheet" />
+
+
+
+
+    <title>Get Job</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 Header_Div">
+                <img src="{{ url_for('static',filename='img/GetJob.png') }}" alt="Logo of Get Job" class="Header_Img">
+                <h1 class="Header_h1">Get Job</h1>
+            </div>            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">    
+                
+                
+
+
+
+
+                <form class="row g-3 m-2 form_desgin" action="" method="POST">
+                    <div class="setup_account">
+                        <h3 > Update Post </h3>
+                    </div>
+                    <div class="alert setup_account" role="alert">
+                        <h3 > {{ msg }}  </h3>
+                    </div>
+
+                {% for fetchone in all_fetched %}
+                    <div class="col-md-6 level">
+                        <label for="Jobtitle" class="form-label" > Job Tittle </label>
+                        <input type="text" value="{{fetchone.1}}" class="form_input" id="Jobtitle" placeholder=" Job Tittle " name="job_title" >
+                    </div>
+                    <div class="col-md-6 level">
+                      <label for="Jobexp" class="form-label">Job Experience </label>
+                      <input type="text" value="{{fetchone.2}}" class="form_input" id="Jobexp" placeholder="Job Experience " name="job_experience" >
+                    </div>
+                    <!--<div class="col-md-6 level">
+                        <label for="inputPassword4" class="form-label">Job Description </label>
+                        <input type="text" value="{{fetchone.3}}" class="form_input"  placeholder="Job Description " name="job_description" />
+                    </div>-->
+                    <div class="col-md-6 level">
+                        <label for="Jobdec" class="form-label">Job Description </label>
+                        <textarea type="text"  class=" form-control form_input" id="Jobdec"  name="job_description">{{fetchone.3}}</textarea>
+                        <!--<textarea type="text" value="{{fetchone.3}}" class="form-control " rows="3">{{fetchone.3}}</textarea>-->
+                    </div>
+                    <div class="col-md-6 level part_full">
+                        <label for="PartTime" class="form-label">Part Time</label>
+                        <input type="radio" name="time" value="Part Time" class=" form-check-input " id="PartTime"checked>
+                        <label for="FullTime" class="form-label">Full Time</label>
+                        <input type="radio" name="time" value="Full Time" class=" form-check-input " id="FullTime">
+                    </div>
+                    {% endfor %}           
+
+
+
+
+
+                    <!--Singin with Continue-->
+                    <div class="col-10 SignUp">
+                        <button type="submit" class="btn SignUp_Btm">Update Post</button>
+                    </div><!--<hr class="hr_or1" align="left">Or<hr class="hr_or2" align="right"> -->         
+                </form>
+                
+                
+                 <!-- <GO Home> -->
+                <div class="container mt-2">
+                    <div class="row ">
+                        <div class="col-12 SignUpGoogle">
+                            <p><i class="bi bi-arrow-left
+                                 me-3 "></i> <a href="/Work" class="go_home">Go Back</a></p>
+                            <p><i class="bi bi-house ms-3 "></i> <a href="/" class="go_home">Go Home</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- </form>-->
+ 
+            </div>            
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

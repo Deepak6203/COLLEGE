@@ -1,0 +1,24 @@
+.part_full{
+    padding-top: 2rem;
+    text-align: center;
+    /* gap: 1rem; */
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.form-check-input:checked {
+    background-color: #00DFB7;
+    border-color: #00DFB7;
+}
+
+.SignUp {
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+  }
+.jobdec{
+    height: auto;
+}

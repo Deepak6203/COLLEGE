@@ -1,0 +1,89 @@
+1. 
+   Makee a New Folder
+   EX. Folder Name (virtual)
+
+
+1.1
+   And Then Open This Folder virtual and press SHIFT and RIGHT Click and open Windows PowerShell
+   Now to Check 
+   i) python or After run {Python} Then  exit()
+   ii)pip 
+   Both Command Run Successfully
+
+
+2. 
+2.1
+   pip install virtualenv
+2.2
+   virtualenv(OPTIONAL)
+2.3
+   Make A Virtual Enviroment
+   Command-->virtualenv deep {deep} as a virtual folder
+   {deep}-> Now Born a new Python and carry all python files & Modules
+   
+
+3.
+3.1
+   After Done then activate virtual enviroment 
+   TYPE=> .\deep\Sc {pess Tab} Then Show .\deep\Scripts\{Enter Activate} 
+   => .\deep\Scripts\activate 
+   => PS C:\Users\DAKSH JET\Desktop\VvirtualEnv> .\deep\Scripts\activate
+   => (deep) PS C:\Users\DAKSH JET\Desktop\VvirtualEnv> 
+   IF U Want To deactivate
+   =>Then Enter {deactivate}
+Else:
+   error then use It 
+   =>Execute The Command In run Administrator powershell {set-executionpolicy remotesigned} 
+   =>set-executionpolicy remotesigned     & pres {Yes}
+
+
+4. 
+   All Packages Version Store in one Text File
+   => pip freeze > requirements.txt
+
+
+5.
+  if u want to use old version of any modules of python then use it
+  =>pip install flask==1.1.1
+  if u want to install at a time all version which is store in requirements.txt then use it
+  =>pip install -r{tab}
+  =>pip install -r .\requirements.txt {this command execute and install one by one install all packages..}
+
+
+================================================================================================================
+3 --> Create New Folder {MainFolder} -> Then Open PS > Terminal
+3.1
+   => python -m virtualenv VitualFolder
+   => python -m virtualenv Stega-master
+   => python -m virtualenv {Folder_Name} 
+   [Then Show]
+   created virtual environment CPython3.10.6.final.0-64 in 6576ms
+  creator CPython3Windows(dest=C:\Users\deepa\Desktop\Steganography2\Stega-master, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\deepa\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==23.0.1, setuptools==67.4.0, wheel==0.38.4
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+3.2 
+  * PS C:\Users\deepa\Desktop\Main_Folder>
+  * PS C:\Users\deepa\Desktop\Main_Folder> { .\VitualFolder\Scripts\activate }
+  [Then Show]
+  (VitualFolder) PS C:\Users\deepa\Desktop\Main_Folder>
+  
+  
+
+================================================================================================================
+Create Requirement txt
+1) 
+  => pip freeze > requirements.txt
+
+Install all pakeges in requirements [Bala]
+2)
+ i]  => pip install -r requirements.txt
+ ii] => pip install -r .\requirements.txt
+
+----------------------------------------------------------------------------------------------------------------
+Delete Virtual Enviroment All Folder file 
+1)
+  => del virtual_enviroment_folder_name
+  => del venv
+  => [A] Press 

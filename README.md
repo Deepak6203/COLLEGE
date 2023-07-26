@@ -1,4 +1,4 @@
-# COLLOGE
+# COLLAGE
 ##How to Upload In this directory pwd--> /c/Users/deepa/Desktop/College1
 
 ### 1$ git status

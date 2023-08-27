@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="helloApp">
+<head>
+  <title>Hello, AngularJS! Deepak[48]</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="HelloController">
+        {{ message }}
+    </div>
+  <script>
+    // Define the AngularJS module
+    var app = angular.module('helloApp', []);
+  
+    // Define the controller
+    app.controller('HelloController', function($scope) {
+      $scope.message = "Hello, World Deepak Kumar!";
+    });
+  </script>  
+</body>
+</html>

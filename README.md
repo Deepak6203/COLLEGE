@@ -30,7 +30,23 @@ origin
 ### 7$ git push origin main
   DONE....
 
+##---------------------------------------------------------------------------------------------------------------------------
+IF Not pushing successfully then 
+$ git push origin
+To https://github.com/Deepak6203/COLLOGE.git<br/>
+ ! [rejected]        main -> main (non-fast-forward)<br/>
+error: failed to push some refs to 'https://github.com/Deepak6203/COLLOGE.git'
 
+
+use1 <br/>
+Pull Remote Changes:
+Run " git pull origin main " (assuming you are on the main branch). This command fetches the latest changes from the remote repository and attempts to merge them into your local branch.<br/>
+use2
+Push Changes:<br/>
+After resolving conflicts, if any, and committing any new changes, you can now try pushing again using " git push origin main " 
+
+
+##============================================================================================================================
 ### Example of Other Repo
 Quick setup — if you’ve done this kind of thing before <br />
 or <br /> 

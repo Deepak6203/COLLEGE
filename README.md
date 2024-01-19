@@ -16,7 +16,7 @@ Your branch is up to date with 'origin/main'.
 ### 3 deepa@DESKTOP-GUMHF41 MINGW64 ~/Desktop/College1 (main)
 $ git add .
 
-### 4$ git commit -m "2 Files Add"
+### 4$ git commit -m "Two Files Add"
 
 
 #### 5$ git status

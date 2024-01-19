@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+
+  <body>
+    <h1>Live streaming</h1>
+    <div>
+
+        <img src="{{ url_for('video') }}" width="50%"/>
+    </div>
+            
+    </body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Video Inputs</title>
+    <style>
+        .camera {
+            display: inline-block;
+            margin: 10px;
+        }
+        /* Add the following CSS rule for the border */
+        .camera img {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video Inputs</h1>
+    {% for camera_index in range(num_cameras) %}
+    <div class="camera" >
+        <h3>Camera {{ camera_index }}</h3>
+        <img src="{{ url_for('video_feed', camera_index=camera_index) }}" width="220" height="140" border="black">
+       
+    </div>
+    {% endfor %}
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Live Streaming</h1>
+    <div>
+        {% for camera_index in range(num_cameras) %}
+            <img id="video{{ camera_index }}" width="640" height="480" src="{{ url_for('video_feed', camera_index=camera_index) }}" />
+        {% endfor %}
+    </div>
+</body>
+</html> -->
+
+
+
+
+

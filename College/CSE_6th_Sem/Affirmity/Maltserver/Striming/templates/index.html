@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiple Video Streams</title>
+</head>
+
+<body>
+    <h1>Live Streaming</h1>
+    <div style="display: flex;">
+        <div>
+            <img src="{{ url_for('video', id=0) }}" width="100%" />
+        </div>
+        <div>
+            <img src="{{ url_for('video', id=1) }}" width="100%" />
+        </div>
+        <div>
+            <img src="{{ url_for('video', id=2) }}" width="100%" />
+        </div>
+        <div>
+            <img src="{{ url_for('video', id=3) }}" width="100%" />
+        </div>
+        <div>
+            <img src="{{ url_for('video', id=4) }}" width="100%" />
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
